@@ -1,20 +1,17 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Hover Effects Showcase
 
-# Run and deploy your AI Studio app
+## Vision
+[cite_start]Galleria tecnica dedicata alle micro-interazioni UI. [cite_start]Il progetto isola e ottimizza diversi effetti visivi (Neon Glow, 3D Tilt, Magnetic Pull) per elevare l'esperienza utente e la fluidità della navigazione[cite: 2, 28].
 
-This contains everything you need to run your app locally.
+## Technical Stack
+- **Framework**: React 19 per la gestione efficiente dei componenti.
+- **Styling**: Tailwind CSS per il design utility-first e la gestione dei gradienti.
+- **Animation Library**: Framer Motion per le transizioni fluide e il rilevamento delle coordinate del mouse (magnetic pull).
+- **Icons**: Lucide React per la grafica vettoriale dei bottoni.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1cwKiBG62CvD-m6AbpzFdxKBhnrMXlP4R
+## Focus Tecnico
+- **GPU Acceleration**: Utilizzo di trasformazioni hardware-accelerated per garantire 60fps durante le animazioni.
+- **Event Handling**: Gestione dinamica degli stati hover e calcolo in tempo reale dei vettori di inclinazione (3D Tilt).
+- **Design System**: Integrazione dell'estetica Glassmorphism coerente con il Social Hub.
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Sviluppato da Ilenia Unida - 2026
