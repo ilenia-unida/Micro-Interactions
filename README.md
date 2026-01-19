@@ -1,7 +1,7 @@
 # Hover Effects Showcase
 
 ## Vision
-Galleria tecnica dedicata alle micro-interazioni UI. [cite_start]Il progetto isola e ottimizza diversi effetti visivi (Neon Glow, 3D Tilt, Magnetic Pull) per elevare l'esperienza utente e la fluidità della navigazione[cite: 2, 28].
+Galleria tecnica dedicata alle micro-interazioni UI. Il progetto isola e ottimizza diversi effetti visivi (Neon Glow, 3D Tilt, Magnetic Pull) per elevare l'esperienza utente e la fluidità della navigazione.
 
 ## Technical Stack
 - **Framework**: React 19 per la gestione efficiente dei componenti.
