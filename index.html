@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hover Effects Showcase - Advanced UI Micro-interactions by Ilenia Unida">
+  <meta name="author" content="Ilenia Unida">
+  <meta property="og:title" content="Hover Effects Showcase | UI Lab">
+  <meta property="og:description" content="Esplora le micro-interazioni moderne e il design responsivo.">
+  <title>Hover Effects Showcase | Ilenia Unida</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=JetBrains+Mono:wght@400&display=swap');
+    
+    :root {
+      --bg-color: #010203;
+      --neon-green: #10b981;
+      --grid-color: rgba(16, 185, 129, 0.15);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: #ffffff;
+      margin: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .mesh-gradient {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background-image: 
+        radial-gradient(circle at 0% 100%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    }
+
+    .bg-glows {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.7;
+      mix-blend-mode: screen;
+      animation: float 15s infinite alternate ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translate(-5%, -5%) scale(1); }
+      50% { transform: translate(10%, 15%) scale(1.2); }
+      100% { transform: translate(-10%, 10%) scale(1); }
+    }
+
+    .scanlines {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(to bottom, transparent 50%, rgba(16, 185, 129, 0.04) 50%);
+      background-size: 100% 4px;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .noise-overlay {
+      position: fixed;
+      inset: 0;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 100;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { 
+      background: var(--neon-green); 
+      border-radius: 10px;
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "react/": "https://esm.sh/react@^19.2.3/",
+      "react": "https://esm.sh/react@^19.2.3",
+      "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    }
+  }
+  </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div class="mesh-gradient"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  
+  <div class="bg-glows">
+    <div class="glow-orb w-[600px] h-[600px] bg-emerald-500/40 -bottom-32 -left-32"></div>
+    <div class="glow-orb w-[400px] h-[400px] bg-green-400/20 top-1/4 -right-20" style="animation-delay: -5s;"></div>
+  </div>
+
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
